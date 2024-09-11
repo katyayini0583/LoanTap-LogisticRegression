@@ -78,6 +78,14 @@ def pub_rec_bankruptcies(number):
     else:
         return number
 
+@app.route('/',methods=['GET'])
+def hello():
+   return "<p>Hello, World!</p>"
+
+@app.route('/ping', methods=['GET'])
+def pinger():
+    return {'MESSAGE':'Hello pinger...!!!'}
+
 @app.route('/predict',methods=['POST'])
 def predict():
 
